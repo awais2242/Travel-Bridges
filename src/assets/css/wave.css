@@ -1,0 +1,51 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
+* {
+    @apply m-0 p-0;
+  }
+  .waveWrapper {
+    @apply absolute overflow-hidden m-auto inset-0;
+  }
+  .waveWrapperInner {
+    @apply absolute w-full h-[calc(100%_-_20vh)] overflow-hidden bg-[linear-gradient(to_top,#0099ff_20%,#005188_80%)] top-0;
+  }
+  .top {
+    @apply opacity-50 z-[15];
+  }
+  .mid {
+    @apply opacity-75 z-10;
+  }
+  .bottom {
+    @apply z-[5];
+  }
+  .wave {
+    @apply absolute w-[200%] h-full bg-[0_bottom] origin-[center_bottom] left-0;
+    background-repeat: repeat no-repeat !important;
+  }
+  .waveTop {
+    @apply bg-[50%_100px] bg-[50%_100px] animate-[wave_3s];
+  }
+  .waveTop {
+    animation-delay: 1s;
+  }
+  @keyframes wave {
+    0% {
+      transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+      transform: translateX(-25%) translateZ(0) scaleY(0.5);
+    }
+    100% {
+      transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+  }
+  .waveMid {
+    @apply bg-[50%_120px] animate-[wave_10s_linear_infinite];
+  }
+  .waveBottom {
+    @apply bg-[50%_100px] animate-[wave_15s_linear_infinite];
+  }
+  
