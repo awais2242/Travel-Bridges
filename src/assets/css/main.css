@@ -272,9 +272,13 @@
 
     /* home-page-blue-color-My-Design */
     --color-indigo-600:67, 66, 225;
+
     --color-slate-950:3, 2, 47;
+
     --color-teal-400:34, 251, 199;
 
+    /* darker-purple-text */
+    --color-indigo-950:22, 21, 62;
 
   }
 
@@ -316,8 +320,8 @@
     /* text-decoration-color: #22FBC7; 
     text-decoration-style:  solid;  */
     /* border-bottom: 1px solid #22FBC7; */
-    @apply border-b-2;
-    @apply border-teal-400;
+    /* @apply border-b-2;
+    @apply border-teal-400; */
   }
   
 

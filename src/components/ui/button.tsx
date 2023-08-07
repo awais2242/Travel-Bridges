@@ -10,16 +10,16 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 const classes = {
-  root: 'inline-flex items-center justify-center shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-accent-700',
+  root: 'inline-flex items-center justify-center shrink-0 font-semibold leading-none rounded outline-none transition duration-300 ease-in-out focus:outline-none focus:shadow focus:ring-1 focus:ring-teal-400',
   normal:
-    'bg-teal-400 text-light border border-transparent hover:bg-accent-hover',
+    'bg-teal-400 text-indigo-950 border border-transparent hover:bg-teal-500 hover:text-white',
   custom: 'border border-transparent',
   outline:
-    'border-2 rounded-none bg-transparent text-body hover:text-light hover:bg-red-450 hover:border-red-450',
+    'border-2 rounded-none bg-transparent text-body hover:text-light hover:bg-teal-400 hover:border-teal-400',
   loading:
     'h-4 w-4 ltr:ml-2 rtl:mr-2 rounded-full border-2 border-transparent border-t-2 animate-spin',
   disabled:
-    'border border-border-base bg-gray-300 hover:bg-gray-300 border-border-400 text-body cursor-not-allowed',
+    'border border-teal-400 bg-teal-400 hover:bg-gray-300 border-border-400 text-body cursor-not-allowed',
   disabledOutline: 'border border-border-base text-muted cursor-not-allowed',
   small: 'px-3 py-0 h-9 text-sm h-10',
   medium: 'px-5 py-0 h-12',

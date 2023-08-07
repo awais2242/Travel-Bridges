@@ -84,6 +84,7 @@ module.exports = {
         'indigo-600': withOpacity('--color-indigo-600'),
         'purple': withOpacity('--color-slate-950'),
         'teal-400': withOpacity('--color-teal-400'),
+        'indigo-950':withOpacity(' --color-indigo-950'),
         social: {
           facebook: '#3b5998',
           'facebook-hover': '#35508a',

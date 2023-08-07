@@ -16,7 +16,7 @@ export default function DashboardLayout({
     <GeneralLayout layout="general">
       <div
         className={classNames(
-          '_dashboard mx-auto flex w-full max-w-1920 flex-col items-start bg-gray-100 px-5 py-10 lg:flex-row xl:py-14 xl:px-8 2xl:px-14',
+          '_dashboard mx-auto flex w-full max-w-1920 flex-col items-start bg-indigo-600 bg-opacity-5 px-5 py-10 lg:flex-row xl:py-14 xl:px-8 2xl:px-14',
           className
         )}
       >

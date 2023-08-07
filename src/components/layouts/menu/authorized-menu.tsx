@@ -26,7 +26,9 @@ const AuthorizedMenu: React.FC<{ minimal?: boolean }> = ({ minimal }) => {
     >
       <Menu.Button className="flex items-center focus:outline-none">
         {minimal ? (
-          <UserOutlinedIcon className="h-5 w-5" />
+          <div className=' p-2 border-2 rounded-full'>
+            <UserOutlinedIcon className="h-5 w-5 text-white" />
+          </div>
         ) : (
           <Avatar
             src={me?.profile?.avatar?.thumbnail ?? avatarPlaceholder}
@@ -49,18 +51,18 @@ const AuthorizedMenu: React.FC<{ minimal?: boolean }> = ({ minimal }) => {
         <Menu.Items
           as="ul"
           className={cn(
-            'absolute mt-1 w-48 rounded bg-white pb-4 shadow-700 focus:outline-none ltr:right-0 ltr:origin-top-right rtl:left-0 rtl:origin-top-left',
+            'absolute mt-1 w-48 rounded bg-gradient-to-r from-[#a7acfd] from-75% to-[#aff1e8] pb-4 shadow-900 focus:outline-none ltr:right-0 ltr:origin-top-right rtl:left-0 rtl:origin-top-left',
             {
               '!mt-2': minimal,
             }
           )}
         >
-          <Menu.Item>
+          {/* <Menu.Item>
             <li className="flex w-full items-center justify-between bg-accent-500 px-6 py-4 text-xs font-semibold capitalize text-light focus:outline-none ltr:text-left rtl:text-right">
               <span>{t('text-points')}</span>
               <span>{me?.wallet?.available_points ?? 0}</span>
             </li>
-          </Menu.Item>
+          </Menu.Item> */}
           {siteSettings.authorizedLinks.map(({ href, label }) => (
             <Menu.Item key={`${href}${label}`}>
               {({ active }) => (
@@ -68,7 +70,7 @@ const AuthorizedMenu: React.FC<{ minimal?: boolean }> = ({ minimal }) => {
                   <button
                     onClick={() => handleClick(href)}
                     className={cn(
-                      'block w-full py-2.5 px-6 text-sm font-semibold capitalize text-heading transition duration-200 hover:text-accent focus:outline-none ltr:text-left rtl:text-right',
+                      'block w-full py-2.5 px-6 text-sm font-thin capitalize text-heading transition duration-200 hover:text-accent focus:outline-none ltr:text-left rtl:text-right',
                       active ? 'text-accent' : 'text-heading'
                     )}
                   >
@@ -83,7 +85,7 @@ const AuthorizedMenu: React.FC<{ minimal?: boolean }> = ({ minimal }) => {
               <button
                 onClick={() => logout()}
                 className={cn(
-                  'block w-full py-2.5 px-6 text-sm font-semibold capitalize text-heading transition duration-200 hover:text-accent focus:outline-none ltr:text-left rtl:text-right'
+                  'block w-full py-2.5 px-6 text-sm font-thin capitalize text-heading transition duration-200 hover:text-accent focus:outline-none ltr:text-left rtl:text-right'
                 )}
               >
                 {t('auth-menu-logout')}

@@ -13,7 +13,7 @@ import { getIcon } from '@/lib/get-icon';
 import isEmpty from 'lodash/isEmpty';
 import * as socialIcons from '@/components/icons/social';
 import Seo from '@/components/seo/seo';
-import { useSettings } from '@/framework/settings';
+// import { useSettings } from '@/framework/settings';
 // export { getStaticProps } from '@/framework/general.ssr';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -21,7 +21,7 @@ import { getLayoutWithFooter } from '@/components/layouts/layout-wabapi';
 import homeImage from '@/assets/images/Group 14883.png';
 import Button from '@/components/ui/button';
 export const LandingPage = () => {
-  const { settings }: any = useSettings();
+  // const { settings }: any = useSettings();
   return (
     <>
       {/* <LandingBody layout={'compact'}/> */}

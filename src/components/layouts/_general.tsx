@@ -1,5 +1,5 @@
-import Header from './myheader';
-import HeaderGeneral from './header-general';
+import Header from './header';
+import HeaderWabapi from './header-wabapi';
 import FooterNew from './footer-new';
 import MobileNavigation from './mobile-navigation';
 
@@ -10,7 +10,7 @@ export default function GeneralLayout({
   return (
     <div className="flex min-h-screen flex-col bg-gray-100 transition-colors duration-150">
       {/* <Header layout={layout} /> */}
-      <HeaderGeneral layout='compact' />
+      <HeaderWabapi layout='compact' />
       {children}
       <MobileNavigation />
       <FooterNew />

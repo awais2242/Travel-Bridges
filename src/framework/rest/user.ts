@@ -5,6 +5,7 @@ import {
   useMutation,
   useQuery,
   useQueryClient,
+  useInfiniteQuery,
 } from 'react-query';
 import { toast } from 'react-toastify';
 import client from './client';
@@ -18,6 +19,8 @@ import type {
   RegisterUserInput,
   ChangePasswordUserInput,
   OtpLoginInputType,
+  UserPaginator,
+  UserQueryOptions,
 } from '@/types';
 import { initialOtpState, optAtom } from '@/components/otp/atom';
 import { useStateMachine } from 'little-state-machine';
@@ -28,6 +31,8 @@ import {
 import { clearCheckoutAtom } from '@/store/checkout';
 import router  from 'next/router'
 import { Routes } from '@/config/routes';
+import { mapPaginatorData } from '@/framework/utils/data-mappers';
+import { formatProductsArgs } from '@/framework/utils/format-products-args';
 
 export function useUser() {
   const [isAuthorized] = useAtom(authorizationAtom);
@@ -421,4 +426,50 @@ export function useVerifyForgotPasswordToken() {
   );
 
   return { mutate, isLoading, formError, setFormError };
+}
+
+// create function to fetch paginated user_list
+
+export function useUsersQuery(options?: Partial<UserQueryOptions>) {
+  // const { locale } = useRouter();
+
+  const formattedOptions = {
+    ...formatProductsArgs(options),
+    // language: locale,
+  };
+
+  const {
+    data,
+    isLoading,
+    error,
+    fetchNextPage,
+    hasNextPage,
+    isFetching,
+    isFetchingNextPage,
+  } = useInfiniteQuery<UserPaginator, Error>(
+    [API_ENDPOINTS.ADMIN.USER_LIST, formattedOptions],
+    ({ queryKey, pageParam }) =>
+      client.users.getUsers(Object.assign({}, queryKey[1], pageParam)),
+    {
+      getNextPageParam: ({ current_page, last_page }) =>
+        last_page > current_page && { page: current_page + 1 },
+    }
+  );
+
+  function handleLoadMore() {
+    fetchNextPage();
+  }
+
+  return {
+    users: data?.pages?.flatMap((page) => page.data) ?? [],
+    paginatorInfo: Array.isArray(data?.pages)
+      ? mapPaginatorData(data?.pages[data.pages.length - 1])
+      : null,
+    isLoading,
+    error,
+    isFetching,
+    isLoadingMore: isFetchingNextPage,
+    loadMore: handleLoadMore,
+    hasMore: Boolean(hasNextPage),
+  };
 }

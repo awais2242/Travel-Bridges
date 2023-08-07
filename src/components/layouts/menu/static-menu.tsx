@@ -19,7 +19,7 @@ const StaticMenu : React.FC<StaticMenuProps> = ({  className }) => {
   return (
     <>
       {headerLinks.map(({ href, label, icon }) => (
-        <li key={`${href}${label}`}>
+        <li key={`${href}${label}`} className='m-1 border-b-2 border-transparent hover:border-teal-400'>
           <Link
             href={href}
             className={cn(

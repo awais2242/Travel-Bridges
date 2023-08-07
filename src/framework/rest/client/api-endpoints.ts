@@ -25,7 +25,7 @@ export const API_ENDPOINTS = {
   USERS: '/users',
   USERS_ADDRESS: '/address',
   USERS_ME: '/me',
-  USERS_LOGIN: '/token',
+  USERS_LOGIN: '/login',
   USERS_REGISTER: '/register',
   USERS_FORGOT_PASSWORD: '/forget-password',
   USERS_VERIFY_FORGOT_PASSWORD_TOKEN: '/verify-forget-password-token',
@@ -46,4 +46,7 @@ export const API_ENDPOINTS = {
   UPLOADS: '/attachments',
   MY_QUESTIONS: '/my-questions',
   MY_REPORTS: '/my-reports',
+  ADMIN: {
+    USER_LIST: '/admin/user/list',
+  }
 };
