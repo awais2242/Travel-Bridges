@@ -39,4 +39,8 @@ export const Routes = {
   searchNewAuriga: '/new-auriga/search',
   searchHafeezCenter: '/hafeez-center-lahore/search',
   searchBookWorld: '/books-world/search',
+  // userList: 'admin/user/list',
+  admin: {
+    userList: '/users',
+  }
 };

@@ -3,22 +3,27 @@ import cn from 'classnames';
 import Link from '@/components/ui/link';
 import { logoPlaceholder, logoPlaceholder3 } from '@/lib/placeholders';
 import { logoPlaceholder2 } from '@/lib/placeholders';
-import { useSettings } from '@/framework/settings';
+import { settings } from '@/framework/static/seo';
 
-const Logo: React.FC<React.AnchorHTMLAttributes<{}>> = ({
+// Create a custom interface for Logo props
+interface LogoProps extends React.AnchorHTMLAttributes<{}> {
+  isLandingPage?: boolean;
+}
+
+const Logo: React.FC<LogoProps> = ({
   className,
   isLandingPage = false,
   ...props
 }) => {
-  const {
-    settings: { logo, siteTitle },
-  }: any = useSettings();
+  // const {
+  //   settings: { logo, siteTitle },
+  // }: any = useSettings();
   return (
     <Link href="/" className={cn('inline-flex', className)} {...props}>
       <span className="relative h-12 w-24 overflow-hidden md:w-40">
         <Image
-          src={!isLandingPage ? (logo?.original ?? logoPlaceholder3) : logoPlaceholder3 }
-          alt={siteTitle || 'Webusiness Api'}
+          src={logoPlaceholder3 }
+          alt={'WABusiness Api'}
           layout="fill"
           objectFit="contain"
           loading="eager"

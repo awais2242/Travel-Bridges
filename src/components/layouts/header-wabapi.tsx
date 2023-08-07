@@ -39,11 +39,11 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
   const isMultilangEnable =
     process.env.NEXT_PUBLIC_ENABLE_MULTI_LANG === 'true' &&
     !!process.env.NEXT_PUBLIC_AVAILABLE_LANGUAGES;
-    const [color, setColor] = useState(false);
-    const changeColor = () => {
-      window.scrollY >= 50 ? setColor(true) : setColor(false);
-    };
-    typeof window !== "undefined" ? window.addEventListener('scroll', changeColor) : null;
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    window.scrollY >= 50 ? setColor(true) : setColor(false);
+  };
+  typeof window !== "undefined" ? window.addEventListener('scroll', changeColor) : null;
   // useEffect(() => {
   //   if (!isHomePage) {
   //     hideHeaderSearch();2
@@ -56,7 +56,7 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
   );
   return (
     <header
-      className={cn('site-header-with-search bg-indigo-600 h-14 sm:h-16 md:h-16 lg:h-22', {
+      className={cn('site-header-with-search h-14 md:h-16 lg:h-22', {
         'lg:!h-auto': isFlattenHeader,
       })}
     >
@@ -67,34 +67,26 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
             'lg:absolute lg:border-0 lg:bg-transparent lg:shadow-none':
               isFlattenHeader,
           },
-          color ? 'bg-indigo-600 shadow-md' : 'bg-transparent'
+          color ? 'bg-indigo-600 shadow-md' : 'bg-indigo-600'
         )}
       >
         {/* //drawer start*/}
         <div className="visible h-12 md:h-14 lg:hidden">
-          <nav className="fixed z-10 flex h-12 w-full justify-between bg- py-1.5 px-2 ltr:left-0 rtl:right-0 md:h-14">
-          <motion.button
-          whileTap={{ scale: 0.88 }}
-          onClick={() => handleSidebar('MAIN_MENU_VIEW')}
-          className="flex h-full items-center justify-center p-2 focus:text-accent focus:outline-none"
-        >
-          <span className="sr-only">{t('text-burger-menu')}</span>
-          <NavbarIcon className={`${isRTL && 'rotate-180 transform'}`} />
-        </motion.button>
-        </nav>
+            <motion.button
+              whileTap={{ scale: 0.88 }}
+              onClick={() => handleSidebar('MAIN_MENU_VIEW')}
+              className="flex h-full items-center justify-center p-2 focus:text-accent focus:outline-none"
+            >
+              <span className="sr-only">{t('text-burger-menu')}</span>
+              <NavbarIcon className={`${isRTL && 'rotate-180 transform'}`} />
+            </motion.button>
         </div>
-          {/* drwer closed */}
-
-
-
-
-
+        {/* drawer closed */}
 
         <div className="flex w-full lg:w-auto lg:ml-14" >
           <Logo
-            className={`${
-              !isMultilangEnable ? 'mx-auto lg:mx-0' : 'ltr:ml-0 rtl:mr-0'
-            }`}
+            className={`${!isMultilangEnable ? 'mx-auto lg:mx-0' : 'ltr:ml-0 rtl:mr-0'
+              }`}
           />
 
           {/* {isMultilangEnable ? (
@@ -104,6 +96,9 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
           ) : (
             ''
           )} */}
+        </div>
+        <div className='visible h-12 md:h-14 lg:hidden'>
+          {isAuthorize ? <AuthorizedMenu minimal={true} /> : <JoinButton />}
         </div>
         {/* {isHomePage ? (
           <>
@@ -122,16 +117,16 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
         ) : null} */}
         <ul className="hidden shrink-0 items-center space-x-7 rtl:space-x-reverse lg:flex 2xl:space-x-10">
           <StaticMenu />
-          <div className="flex items-center space-x-24 rtl:space-x-reverse">
+          <div className="flex items-center space-x-7 rtl:space-x-reverse">
+            <li>{isAuthorize ? <AuthorizedMenu minimal={true} /> : <JoinButton />}</li>
             <a
               href={`${process.env.NEXT_PUBLIC_ADMIN_URL}/register`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex h-9 w-28 items-center justify-center rounded border border-transparent bg-teal-400  py-0 text-sm leading-none text-blue outline-none transition duration-300 ease-in-out hover:bg-accent-hover focus:shadow focus:outline-none focus:ring-1 focus:ring-accent-700"
+              className="inline-flex h-9 w-28 items-center justify-center rounded border border-transparent bg-teal-400  py-0 text-sm leading-none text-indigo-950 hover:text-white outline-none transition duration-300 ease-in-out hover:bg-teal-500 focus:shadow focus:outline-none focus:ring-1 focus:ring-accent-700"
             >
               {t('text-contact-us')}
             </a>
-            {/* <li>{isAuthorize ? <AuthorizedMenu /> : <JoinButton />}</li> */}
           </div>
           {isMultilangEnable ? (
             <div className="ms-auto lg:me-5 xl:me-8 2xl:me-10 hidden flex-shrink-0 lg:block">

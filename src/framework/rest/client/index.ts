@@ -72,6 +72,8 @@ import type {
   GetParams,
   SettingsQueryOptions,
   ShopFeaturedArray,
+  UserQueryOptions,
+  UserPaginator
 } from '@/types';
 import { API_ENDPOINTS } from './api-endpoints';
 import { HttpClient } from './http-client';
@@ -289,6 +291,8 @@ class Client {
   };
   users = {
     me: () => HttpClient.get<User>(API_ENDPOINTS.USERS_ME),
+    getUsers: (params: Partial<UserQueryOptions>) =>
+      HttpClient.get<UserPaginator>(API_ENDPOINTS.ADMIN.USER_LIST, params),
     update: (user: UpdateUserInput) =>
       HttpClient.put<User>(`${API_ENDPOINTS.USERS}/${user.id}`, user),
     login: (input: LoginUserInput) =>

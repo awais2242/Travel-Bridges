@@ -7,6 +7,7 @@ type BadgeProps = {
   textColor?: string;
   text?: string;
   style?: any;
+  animate?: boolean,
 };
 
 const Badge: React.FC<BadgeProps> = ({
@@ -15,6 +16,7 @@ const Badge: React.FC<BadgeProps> = ({
   textColor: textColorOverride,
   text,
   style,
+  animate= false,
 }) => {
   const { t } = useTranslation();
 
@@ -22,6 +24,7 @@ const Badge: React.FC<BadgeProps> = ({
     root: 'px-3 py-1 rounded-full text-sm',
     default: 'bg-accent',
     text: 'text-light',
+    animate: 'animate-pulse',
   };
 
   return (
@@ -31,6 +34,7 @@ const Badge: React.FC<BadgeProps> = ({
         {
           [classes.default]: !colorOverride,
           [classes.text]: !textColorOverride,
+          [classes.animate]: animate,
         },
         colorOverride,
         textColorOverride,

@@ -8,7 +8,7 @@
     "start": "export $(cat .env | xargs) && next start -p 3004",
     "lint": "next lint",
     "postbuild": "next-sitemap",
-    "prepare": "cd ../../ && husky install"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@headlessui/react": "1.6.5",

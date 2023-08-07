@@ -7,7 +7,7 @@ import { ToastContainer } from 'react-toastify';
 import { ModalProvider } from '@/components/ui/modal/modal.context';
 import ManagedModal from '@/components/ui/modal/managed-modal';
 import ManagedDrawer from '@/components/ui/drawer/managed-drawer';
-import DefaultSeo from '@/components/seo/default-seo';
+import DefaultSeo from '@/components/seo/default-seo-static';
 import { SearchProvider } from '@/components/ui/search/search.context';
 import PrivateRoute from '@/lib/private-route';
 import { CartProvider } from '@/store/quick-cart/cart.context';

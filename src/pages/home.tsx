@@ -9,7 +9,7 @@ import { getIcon } from '@/lib/get-icon';
 import isEmpty from 'lodash/isEmpty';
 import * as socialIcons from '@/components/icons/social';
 import Seo from '@/components/seo/seo';
-import { useSettings } from '@/framework/settings';
+// import { useSettings } from '@/framework/settings';
 // export { getStaticProps } from '@/framework/general.ssr';
 import { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -35,7 +35,7 @@ import homeImage from '@/assets/images/Group 14883.png';
 
 export const HomePage = () => {
   const { t } = useTranslation('common');
-  const { settings }: any = useSettings();
+  // const { settings }: any = useSettings();
 
   // const { types }: any = useTypes({
   //   limit: TYPES_PER_PAGE,

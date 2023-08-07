@@ -65,10 +65,10 @@ function RegisterForm() {
             />
             <div className="mt-8">
               <Button
-                className="h-12 w-full text-red-450"
+                className="h-12 w-full text-real-400 font-thin rounded-none"
                 loading={isLoading}
                 disabled={isLoading}
-                variant='outline'
+                variant='normal'
               >
                 {t('text-register')}
               </Button>
@@ -88,7 +88,7 @@ function RegisterForm() {
         {t('text-already-account')}{' '}
         <button
           onClick={() => openModal('LOGIN_VIEW')}
-          className="font-semibold text-accent hover:text-red-450 underline transition-colors duration-200 hover:text-accent-hover hover:no-underline focus:text-accent-hover focus:no-underline focus:outline-none ltr:ml-1 rtl:mr-1"
+          className="font-semibold text-accent hover:text-teal-400 underline transition-colors duration-200 hover:text-accent-hover hover:no-underline focus:text-accent-hover focus:no-underline focus:outline-none ltr:ml-1 rtl:mr-1"
         >
           {t('text-login')}
         </button>
@@ -114,14 +114,14 @@ export default function RegisterView() {
         {t('registration-helper')}
         <span
           onClick={() => handleNavigate('terms')}
-          className="mx-1 cursor-pointer text-accent underline hover:no-underline hover:text-red-450"
+          className="mx-1 cursor-pointer text-accent underline hover:no-underline hover:text-teal-400"
         >
           {t('text-terms')}
         </span>
         &
         <span
           onClick={() => handleNavigate('privacy')}
-          className="cursor-pointer text-accent underline hover:no-underline hover:text-red-450 ltr:ml-1 rtl:mr-1"
+          className="cursor-pointer text-accent underline hover:no-underline hover:text-teal-400 ltr:ml-1 rtl:mr-1"
         >
           {t('text-policy')}
         </span>

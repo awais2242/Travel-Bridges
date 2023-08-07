@@ -25,6 +25,32 @@ export interface HomePageProps {
   layout: string;
 }
 
+export interface MappedPaginatorInfo {
+  currentPage: number;
+  firstPageUrl: string;
+  from: number;
+  lastPage: number;
+  lastPageUrl: string;
+  links: any[];
+  nextPageUrl: string | null;
+  path: string;
+  perPage: number;
+  prevPageUrl: string | null;
+  to: number;
+  total: number;
+  hasMorePages: boolean;
+}
+
+export enum SortOrder {
+  Asc = 'asc',
+  Desc = 'desc',
+}
+
+export enum UserRole {
+  Admin = 'admin',
+  User = 'user',
+}
+
 export interface SearchParamOptions {
   type: string;
   name: string;
@@ -73,6 +99,24 @@ export interface Attachment {
 }
 
 export interface ProductQueryOptions extends QueryOptions {
+  shop_id: string;
+  sortedBy: string;
+  orderBy: string;
+  name: string;
+  categories: string;
+  tags: string;
+  type: string;
+  manufacturer: string;
+  author: string;
+  price: string;
+  min_price: string;
+  max_price: string;
+  language: string;
+  searchType: string;
+  searchQuery: string;
+  text: string;
+}
+export interface UserQueryOptions extends QueryOptions {
   shop_id: string;
   sortedBy: string;
   orderBy: string;
@@ -240,6 +284,12 @@ export interface Shop {
   slug: string;
   description: string;
   cover_image: Attachment;
+}
+export interface Company {
+  id: number,
+  name: string,
+  address: string,
+  slug: string,
 }
 export interface FeaturedShop {
   id: string;
@@ -429,8 +479,6 @@ export interface Address {
 
 export interface User {
   id: string;
-  name: string;
-  email: string;
   wallet: {
     total_points: number;
     points_used: number;
@@ -442,6 +490,16 @@ export interface User {
     bio?: string;
     avatar?: Attachment;
   };
+  company_id: number;
+  company: Company;
+  deleted_at: string;
+  email: string;
+  email_verified_at: string;
+  // id: number;
+  name: string;
+  role: UserRole;
+  status: number;
+  user_instance: [];
   address: Address[];
 }
 
@@ -673,6 +731,8 @@ export interface UserAddress {
 }
 
 export interface ProductPaginator extends PaginatorInfo<Product> {}
+
+export interface UserPaginator extends PaginatorInfo<User> {}
 
 export interface CategoryPaginator extends PaginatorInfo<Category> {}
 

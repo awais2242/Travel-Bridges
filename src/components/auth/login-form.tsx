@@ -49,6 +49,7 @@ function LoginForm() {
       <Form<LoginUserInput>
         onSubmit={onSubmit}
         validationSchema={loginFormSchema}
+        className='mb-6'
       >
         {({ register, formState: { errors } }) => (
           <>
@@ -70,10 +71,10 @@ function LoginForm() {
             />
             <div className="mt-8">
               <Button
-                className="h-11 w-full sm:h-12 text-red-450"
+                className="h-11 w-full sm:h-12 text-teal-400 font-thin rounded-none"
                 loading={isLoading}
                 disabled={isLoading}
-                variant='outline'
+                variant='normal'
               >
                 {t('text-login')}
               </Button>
@@ -82,7 +83,7 @@ function LoginForm() {
         )}
       </Form>
       {/* //===============// */}
-      <div className="relative mt-8 mb-6 flex flex-col items-center justify-center text-sm text-heading sm:mt-11 sm:mb-8">
+      {/* <div className="relative mt-8 mb-6 flex flex-col items-center justify-center text-sm text-heading sm:mt-11 sm:mb-8">
         <hr className="w-full" />
         <span className="absolute -top-2.5 bg-light px-2 ltr:left-2/4 ltr:-ml-4 rtl:right-2/4 rtl:-mr-4">
           {t('text-or')}
@@ -124,12 +125,12 @@ function LoginForm() {
       </div>
       <div className="relative mt-8 mb-6 flex flex-col items-center justify-center text-sm text-heading sm:mt-11 sm:mb-8">
         <hr className="w-full" />
-      </div>
+      </div> */}
       <div className="text-center text-sm text-body sm:text-base">
         {t('text-no-account')}{' '}
         <button
           onClick={() => openModal('REGISTER')}
-          className="font-semibold text-accent hover:text-red-450 underline transition-colors duration-200 hover:no-underline focus:text-accent-hover focus:no-underline focus:outline-none ltr:ml-1 rtl:mr-1"
+          className="font-semibold text-accent hover:text-teal-400 underline transition-colors duration-200 hover:no-underline focus:text-accent-hover focus:no-underline focus:outline-none ltr:ml-1 rtl:mr-1"
         >
           {t('text-register')}
         </button>
