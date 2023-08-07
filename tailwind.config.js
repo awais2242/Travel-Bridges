@@ -82,7 +82,7 @@ module.exports = {
         'red-450': withOpacity('--color-red-450'),
         'sea-green-grey': withOpacity('--color-light-grayish-green'),
         'indigo-600': withOpacity('--color-indigo-600'),
-        'purple': withOpacity('--color-slate-950'),
+        'slate-950': withOpacity('--color-slate-950'),
         'teal-400': withOpacity('--color-teal-400'),
         social: {
           facebook: '#3b5998',
@@ -161,6 +161,8 @@ module.exports = {
         'hafeez-center-lahore': "url('../images/hafeez-center-lahore.png')",
         'books-world': "url('../images/books-world.png')",
         'offers': "url('../images/offers.png')",
+        'background-footer': "url('../images/Frame 14987.png')",
+        'background-dotted-rectangle':"url('../images/Group 14810.png')",
       }
       
     },
