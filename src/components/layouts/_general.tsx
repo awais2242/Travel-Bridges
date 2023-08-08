@@ -1,6 +1,6 @@
-import Header from './header';
+// import Header from './header';
 import HeaderWabapi from './header-wabapi';
-import FooterNew from './footer-new';
+import FooterNew from './footer-new-wabapi';
 import MobileNavigation from './mobile-navigation';
 
 export default function GeneralLayout({
