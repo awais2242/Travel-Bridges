@@ -82,7 +82,7 @@ export const siteSettings = {
   },
   footer: {
     copyright: {
-      name: 'Vemporiums',
+      name: 'Wabusinessapi',
       href: 'https://vemporiums.com/',
     },
     address: '2429 River Drive, Suite 35 Cottonhall, CA 2296 United Kingdom',
@@ -90,68 +90,52 @@ export const siteSettings = {
     phone: '+1 256-698-0694',
     menus: [
       {
-        title: 'text-explore',
+        title: 'text-company',
         links: [
           {
             name: 'text-about-us',
             href: '/',
           },
           {
-            name: 'text-sitemap',
+            name: 'text-whywabusinessapi',
             href: '/',
           },
           {
-            name: 'text-bookmarks',
-            href: '/',
-          },
-          {
-            name: 'text-sign-join',
+            name: 'text-public-policy',
             href: '/',
           },
         ],
       },
       {
-        title: 'text-customer-service',
+        title: 'text-solution',
         links: [
           {
-            name: 'text-faq-help',
-            href: Routes.help,
-          },
-          {
-            name: 'text-returns',
+            name: 'text-customer-data-platform',
             href: '/',
           },
           {
-            name: 'text-accessibility',
+            name: 'text-sms-marketing',
             href: '/',
           },
           {
-            name: 'text-contact-us',
-            href: Routes.contactUs,
-          },
-          {
-            name: 'text-store-pickup',
+            name: 'text-contact-center',
             href: '/',
           },
         ],
       },
       {
-        title: 'text-our-information',
+        title: 'text-resources',
         links: [
           {
-            name: 'text-privacy-update',
+            name: 'text-blog',
             href: Routes.privacy,
           },
           {
-            name: 'text-terms-condition',
+            name: 'text-apidocs',
             href: Routes.terms,
           },
           {
-            name: 'text-return-policy',
-            href: '/',
-          },
-          {
-            name: 'text-sitemap',
+            name: 'text-help-center',
             href: '/',
           },
         ],
@@ -176,6 +160,28 @@ export const siteSettings = {
       },
       {
         img: '/payment/discover.png',
+        url: '/',
+      },
+    ],
+    description: [
+      {
+        title: 'text-privacy-policy',
+        url: '/',
+      },
+      {
+        title: 'text-legal',
+        url: '/',
+      },
+      {
+        title: 'text-wabusinessapi',
+        url: '/',
+      },
+      {
+        title: 'text-press-media',
+        url: '/',
+      },
+      {
+        title: 'text-investors',
         url: '/',
       },
     ],
