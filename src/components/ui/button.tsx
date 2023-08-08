@@ -22,7 +22,7 @@ const classes = {
     'border border-teal-400 bg-teal-400 hover:bg-gray-300 border-border-400 text-body cursor-not-allowed',
   disabledOutline: 'border border-border-base text-muted cursor-not-allowed',
   small: 'px-3 py-0 h-9 text-sm h-10',
-  medium: 'px-10 py-6 h-12',
+  medium: 'px-5 py-0 h-12',
   big: 'px-10 py-0 h-14',
 };
 
@@ -30,8 +30,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (props, ref) => {
     const {
       className,
-      variant ,
-      size  ,
+      variant= 'normal',
+      size ='medium' ,
       children,
       active,
       loading = false,

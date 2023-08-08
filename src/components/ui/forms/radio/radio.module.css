@@ -35,7 +35,7 @@
   position: absolute;
   top: 4px;
   left: 4px;
-  
+  border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
