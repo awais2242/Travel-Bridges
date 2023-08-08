@@ -127,61 +127,6 @@ export const LandingPage = () => {
           </div>
 
       
-          <div className='relative top-56 z-20'>
-            <Image
-              src={dotsRectangle}
-              alt="DottedRectangle"
-              width={170}
-              height={220}
-            
-            />
-            </div>
-           
-          <div className="grid grid-cols-1 my-20 items-center justify-center md:grid-cols-2  bg-slate-950 ">
-            <div className="flex  text-base my-20 mx-44  space-x-2 ">
-            
-            <Image
-              src={circle}
-              alt="Circle"
-              width={50}
-              height={50}
-              className='relative top-10 left-40 md:top-16 md:left-40 z-20'
-            />
-            
-             <div className='relative  bottom-16 right-10 md:top-16 md:left-40 z-20'>
-            <Image
-              src={circle}
-              alt="Circle"
-              width={50}
-              height={50}
-            
-            />
-            </div>
-            <span className="mr-1 text-2xl text-white">Join</span>
-            <span className="mr-1 text-2xl text-white">The</span>
-            <span className="text-2xl text-teal-400">WaBusinessapi</span>
-
-              
-            </div>
-            <div className=" relative flex h-10 items-center justify-center text-sm pb-10 md:pb-0 ">
-              <Button className="rounded bg-teal-400 px-6 py-3 text-indigo-950 shadow-sm shadow-teal-400 hover:bg-teal-500 hover:text-white">
-                Get started
-              </Button>
-              <Button className="rounded ml-4 bg-white px-6 py-2 text-indigo-950 shadow-sm shadow-teal-400 hover:bg-teal-500 hover:text-white ">
-                sign up free
-                <ArrowNextIcon></ArrowNextIcon>
-              </Button>
-              {/* <div className='absolute  top-0 right-0  z-20 transform translate-x-1/3 -translate-y-64 md:translate-x-1/3 md:-translate-y-36 '>
-            <Image
-              src={CurveLines}
-              alt='footerIamge'
-              width={250}
-              height={200}
-            />
-        </div> */}
-            </div>
-            
-          </div>
           
        
         </section>

@@ -47,7 +47,7 @@ const FooterNew = () => {
             ))}
           </div>
 
-          <div className="mb-2 mt-6 flex grid grid-cols-1 flex-row items-center justify-center  md:mx-20  md:grid-cols-5  lg:mx-40 lg:mt-0  xl:mx-80">
+          <div className="pb-6 mt-6 flex grid grid-cols-1 flex-row items-center justify-center  md:mx-20  md:grid-cols-5  lg:mx-40 lg:mt-0  xl:mx-80">
             {footerDescription?.slice(0,-1)?.map((method, idx) => (
               <>
                 <Link
@@ -82,7 +82,7 @@ const FooterNew = () => {
               {siteSettings.footer.copyright.name}.
             </Link>{' '}
             <div className="ml-3 text-xs">
-              &copy;{t('text-2021')}
+              
               {t('text-rights-reserved')}
             </div>
           </span>
