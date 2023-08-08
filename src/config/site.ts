@@ -108,7 +108,7 @@ export const siteSettings = {
             href: '/',
           },
           {
-            name: 'text-wabusinessapi',
+            name: 'text-whywabusinessapi',
             href: '/',
           },
           {
