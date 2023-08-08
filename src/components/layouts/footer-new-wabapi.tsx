@@ -4,9 +4,7 @@ import Link from '@/components/ui/link';
 import Logo from '@/components/ui/logo';
 import LinesTop from '@/assets/images/Group 14805.png';
 import { Image } from '@/components/ui/image';
-import { FacebookIcon } from '../icons/facebook';
-import { InstagramIcon } from '../icons/instagram';
-import { TwitterIcon } from '../icons/twitter';
+
 const FooterNew = () => {
   const { t } = useTranslation('common');
   const footerDescription = siteSettings.footer.description;
@@ -47,7 +45,7 @@ const FooterNew = () => {
             ))}
           </div>
 
-          <div className="pb-6 mt-6 flex grid grid-cols-1 flex-row items-center justify-center  md:mx-20  md:grid-cols-5  lg:mx-40 lg:mt-0  xl:mx-80">
+          <div className="pb-6 mt-6  grid grid-cols-1 items-center justify-center  md:mx-20  md:grid-cols-5  lg:mx-40 lg:mt-0  xl:mx-80">
             {footerDescription?.slice(0,-1)?.map((method, idx) => (
               <>
                 <Link

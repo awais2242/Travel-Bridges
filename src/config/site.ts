@@ -108,7 +108,7 @@ export const siteSettings = {
             href: '/',
           },
           {
-            name: 'text-why-whazap',
+            name: 'text-wabusinessapi',
             href: '/',
           },
           {
@@ -142,7 +142,7 @@ export const siteSettings = {
             href: Routes.privacy,
           },
           {
-            name: 'text-branding',
+            name: 'text-apidocs',
             href: Routes.terms,
           },
           {

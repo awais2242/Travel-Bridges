@@ -445,10 +445,11 @@
   "text-sms-marketing": "SMS Marketing",
   "text-contact-center": "Contact Center",
   "text-blog": "Blog",
-  "text-branding": "Branding",
+  "text-apidocs": "API Docs",
   "text-2021": "2021",
   "text-legal": "Legal",
   "text-wabusinessapi": "Wabusinessapi",
   "text-press-media": "Press & Media",
   "text-investors": "Investors"
+  
 }
