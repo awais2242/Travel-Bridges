@@ -22,8 +22,6 @@ import { Role } from '@/framework/utils/constants'
 const adminOnly = Role.Admin;
 export default function UsersPage() {
   const [searchTerm, setSearchTerm] = useState('');
-  const [type, setType] = useState('');
-  const [category, setCategory] = useState('');
   const [page, setPage] = useState(1);
   const { t } = useTranslation();
   const { locale } = useRouter();
@@ -116,9 +114,8 @@ export default function UsersPage() {
     </div>
   );
 }
-UsersPage.authenticate = {
-  permissions: adminOnly,
-};
+
+UsersPage.authenticationRequired = true;
 UsersPage.Layout = getLayoutWithFooter;
 UsersPage.getLayout = function getLayout(page: React.ReactElement) {
   return <DashboardLayout>{page}</DashboardLayout>;
