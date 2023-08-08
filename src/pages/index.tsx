@@ -171,14 +171,14 @@ export const LandingPage = () => {
                 sign up free
                 <ArrowNextIcon></ArrowNextIcon>
               </Button>
-              <div className='absolute  top-0 right-0  z-20 transform translate-x-1/3 -translate-y-64 md:translate-x-1/3 md:-translate-y-36 '>
+              {/* <div className='absolute  top-0 right-0  z-20 transform translate-x-1/3 -translate-y-64 md:translate-x-1/3 md:-translate-y-36 '>
             <Image
               src={CurveLines}
               alt='footerIamge'
               width={250}
               height={200}
             />
-        </div>
+        </div> */}
             </div>
             
           </div>
