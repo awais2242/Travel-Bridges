@@ -3,7 +3,7 @@ import Header from './header';
 import HeaderMinimal from './header-minimal';
 import MobileNavigation from './mobile-navigation';
 import Footer from './footer';
-import Headertwo from './header-wabapi';
+import HeaderWabapi from './header-wabapi';
 
 export default function SiteLayout({ children }: React.PropsWithChildren<{}>) {
   const { layout } = useLayout();
@@ -12,7 +12,7 @@ export default function SiteLayout({ children }: React.PropsWithChildren<{}>) {
       {['minimal', 'compact'].includes(layout) ? (
         <HeaderMinimal layout={layout} />
       ) : (
-        <Headertwo layout={layout} />
+        <HeaderWabapi layout={layout} />
       )}
       {children}
       {['compact'].includes(layout) && <Footer />}
