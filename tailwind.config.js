@@ -110,6 +110,7 @@ module.exports = {
         40: '10rem', // 140px
         6: '2.5rem',
       },
+
       height: {
         4.5: '1.125rem',
         13: '3.125rem',
