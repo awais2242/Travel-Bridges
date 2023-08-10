@@ -293,7 +293,7 @@
     @apply text-base;
     @apply font-light;
   }
-
+ 
   h1,
   h2,
   h3,
@@ -329,3 +329,4 @@
 
 }
 @import './custom-plugins.css';
+@import './wave.css'

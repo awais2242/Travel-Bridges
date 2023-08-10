@@ -13,6 +13,8 @@ interface BannerProps {
   layout?: string;
 }
 
+
+
 const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
   const { showHeaderSearch, hideHeaderSearch } = useHeaderSearch();
   const intersectionRef = useRef(null);
@@ -35,6 +37,7 @@ const BannerWithSearch: React.FC<BannerProps> = ({ banners, layout }) => {
   return (
     <>
       <div
+
         className={cn('relative hidden lg:block', {
           '!block': layout === 'minimal',
         })}

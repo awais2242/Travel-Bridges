@@ -18,7 +18,7 @@ const variantClasses = {
     'bg-gray-100 border border-border-base rounded-none focus:shadow focus:bg-light focus:border-accent',
   solid:
     'bg-gray-100 border border-border-100 rounded-none focus:bg-light focus:border-accent',
-  outline: 'border border-border-base rounded-none focus:border-accent',
+  outline: 'border border-teal-400 rounded-md placeholder-white focus:border-teal-500',
   line: 'ltr:pl-0 rtl:pr-0 border-b border-border-base rounded-none focus:border-accent',
 };
 
@@ -62,7 +62,7 @@ const Input = React.forwardRef<HTMLInputElement, Props>(
           type={type}
           ref={ref}
           className={cn(
-            'flex w-full appearance-none items-center px-4 text-sm text-heading transition duration-300 ease-in-out focus:outline-none focus:ring-0',
+            'flex w-full appearance-none  bg-indigo-600  items-center px-4 text-sm text-white transition duration-300 ease-in-out focus:outline-none focus:ring-0',
             shadow && 'focus:shadow',
             variantClasses[variant],
             sizeClasses[dimension],
