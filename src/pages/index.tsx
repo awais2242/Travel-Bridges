@@ -1,23 +1,7 @@
-import Headertwo from '@/components/layouts/header-wabapi';
-import MobileNavigation from '@/components/layouts/mobile-navigation';
-import HomePage from './home';
 export { getStaticProps } from '@/framework/general.ssr';
-import { useTranslation } from 'next-i18next';
-import ContactForm from '@/components/settings/contact-form';
 import ContactFormWebapi from '@/components/settings/contact-form-webapi';
 import { Image } from '@/components/ui/image';
-import contactIllustration from '@/assets/contact-illustration.svg';
-// import { getLayoutWithFooter } from '@/components/layouts/layout-with-footer-landing';
-import LandingBody from '@/components/layouts/landing-body';
-import { formatAddress } from '@/lib/format-address';
-import { getIcon } from '@/lib/get-icon';
-import isEmpty from 'lodash/isEmpty';
-import * as socialIcons from '@/components/icons/social';
 import Seo from '@/components/seo/seo';
-// import { useSettings } from '@/framework/settings';
-// export { getStaticProps } from '@/framework/general.ssr';
-import { GetStaticProps } from 'next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getLayoutWithFooter } from '@/components/layouts/layout-wabapi';
 import homeImage from '@/assets/images/Group 14883.png';
 import broadcast from '@/assets/images/Vector.png';
@@ -25,11 +9,9 @@ import chatbots from '../assets/images/Vector-1.png';
 import agents from '@/assets/images/Vector-2.png';
 import automation from '@/assets/images/Vector-3.png';
 import communication from '@/assets/images/Vector-4.png';
-import mask from '@/assets/images/Mask group.png';
 import mask2 from '@/assets/images/Mask group2.png';
 import circle from '@/assets/images/Ellipse 1975.png';
 import dotsRectangle from '@/assets/images/Group 14810.png';
-import CurveLines from '@/assets/images/Group 14805.png';
 import CurveLiness from '@/assets/images/Group 14805copy.png';
 import mobile from '@/assets/images/Group 14835.png';
 import inbox from '@/assets/images/Group 14836.png';
@@ -104,13 +86,12 @@ const cards = [
 ];
 
 export const LandingPage = () => {
-  // const { settings }: any = useSettings();
   return (
     <>
       <Seo title={'Home'} url={'home'} />
       <main className="bg-light">
-        <section className="z-15">
-          <div className="grid grid-cols-1 gap-5">
+        <section>
+          <div className="z-15 grid grid-cols-1 gap-5">
             <div className="grid grid-cols-1 gap-5 bg-indigo-600 sm:grid-cols-2">
               <div className="items-center justify-center">
                 <div className="xl:ml-62 mx-8 mt-28 xs:pr-14 md:mt-40 lg:ml-48  lg:mt-28 lg:pr-16 xl:pr-20">
@@ -137,20 +118,21 @@ export const LandingPage = () => {
                 </div>
               </div>
               <div className="flex flex-col items-center justify-center">
-                <div className="relative z-20 mb-28 sm:h-2/6 md:h-3/6 md:max-h-[610px] lg:h-96">
+                <div className="relative z-20 sm:h-2/6 md:h-3/6 md:max-h-[610px] lg:h-96">
                   <Image
                     src={homeImage}
                     alt="Banner"
-                    width={550}
-                    height={550}
+                    width={450}
+                    height={450}
                   />
                 </div>
               </div>
             </div>
           </div>
+          <div className="relative bottom-16">
+            <WaveForm />
+          </div>
         </section>
-
-        <WaveForm />
 
         <SectionBlock title="" className={'bg-light py-10 '}>
           <div></div>
@@ -247,39 +229,40 @@ export const LandingPage = () => {
           </div>
         </SectionBlock>
         <div className="relative w-full flex-col border-t border-gray-300 bg-slate-950">
-          <div className="absolute top-4 left-20 z-20 md:top-4 sm:left-52 hidden sm:block" >
+          <div className="absolute top-4 left-20 z-20 hidden sm:left-52 sm:block md:top-4">
             <Image src={circle} alt="Circle" width={44} height={44} />
           </div>
-          <div className="absolute top-6 left-80  z-20 xs:top-10 xs:left-52 sm:top-0 sm:left-2/3 md:left-3/4 ">
+          <div className="absolute top-4 left-80  z-20 xs:top-2 xs:left-60 sm:top-0 sm:left-2/3 md:left-3/4">
             <Image src={circle} alt="Circle" width={44} height={44} />
           </div>
-          <div className="absolute left-0 ">
+          <div className="absolute left-0 mt-2 sm:mt-0">
             <Image
               src={dotsRectangle}
+              // className='w-140'
               alt="Rectangle"
-            
-              height={210}
+              // fill
+              // layout="responsive"
+              // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              height={218}
             />
           </div>
 
-          <div className="absolute  top-0 right-0  z-20 translate-x  -translate-y-20 transform  hidden xs:block">
+          <div className="translate-x  absolute top-0  right-0 z-20  hidden -translate-y-20 transform xs:block">
             <div className="overflow-hidden">
-              <Image 
-              
-              src={CurveLiness} alt="Lines" width={180} height={190} />
+              <Image src={CurveLiness} alt="Lines" width={180} height={190} />
             </div>
           </div>
 
-          <div className="mt-20 grid grid-cols-1  sm:grid-cols-2 ">
-            <div className="flex flex-row items-center justify-center pb-10 text-lg sm:ml-24 lg:ml-52 sm:pb-20 sm:text-2xl md:text-3xl xl:ml-12">
+          <div className="mx-auto mt-20 grid  grid-cols-1 sm:grid-cols-2">
+            <div className="flex flex-row items-center justify-center text-xl xs:text-2xl sm:ml-24 sm:pb-20 md:text-3xl lg:ml-52 xl:ml-20">
               <p className="mr-1  text-white">Join</p>
               <p className="mr-1  text-white">The</p>&nbsp;
               <p className=" text-teal-400">WaBusinessapi</p>
-              <div className="absolute top-28 right-28 z-20 xs:top-28 xs:right-44 sm:top-32 sm:right-96 md:right-2/3 md:top-36">
+              <div className="absolute top-20 right-28 hidden xs:top-44 xs:block sm:top-32 sm:right-96 md:right-2/3 md:top-36">
                 <Image src={circle} alt="Circle" width={44} height={44} />
               </div>
             </div>
-            <div className=" ml-14 flex flex-row items-center justify-center py-4  text-sm sm:pb-20">
+            <div className=" flex flex-row items-center justify-center py-4 pb-16  text-sm sm:pb-20">
               <Button
                 size="medium2"
                 className="rounded bg-teal-400  text-indigo-950 shadow-md shadow-teal-600 hover:bg-teal-700 hover:text-white"
@@ -297,51 +280,8 @@ export const LandingPage = () => {
             </div>
           </div>
         </div>
-        {/* <div className="flex bg-slate-950">
-          <div className="">
-            <Image
-              className="md:w-180 md:h-210"
-              src={dotsRectangle}
-              alt="Banner"
-              //layout="responsive"
-              width={100}
-              height={200}
-            />
-            <Image
-              className="md:w-180 md:h-210"
-              src={CurveLines}
-              alt="Banner"
-              //layout="responsive"
-              width={40}
-              height={20}
-            />
-          </div>
-          <div className="mt:10 grid grid-cols-1  sm:grid-cols-2">
-            <div className="text-base">
-              <div className="mt-16 flex">
-                <Image
-                  className="md:w-180 md:h-210"
-                  src={circle}
-                  alt="Banner"
-                  //layout="responsive"
-                  width={40}
-                  height={40}
-                />
-                <span className="mr-1 text-white">Join The</span>
-                <span className="text-teal-400">WaBusinessapi</span>
-              </div>
-            </div>
-            <div className="mb-10 flex items-center justify-around text-sm">
-              <Button className="rounded bg-teal-400 px-1 py-2 text-indigo-950 shadow-sm shadow-teal-400 hover:bg-teal-500 hover:text-white">
-                Get started
-              </Button>
-              <Button className="rounded bg-white px-1 py-2 text-indigo-950 shadow-sm shadow-teal-400 hover:bg-teal-500 hover:text-white ">
-                sign up free
-              </Button>
-            </div>
-          </div>
-        </div> */}
-        <SectionBlock title="" className={' bg-indigo-600 '}>
+
+        <SectionBlock title="" className={' bg-indigo-600'}>
           <div className="items center text-bold mt-10 flex justify-center  text-lg text-white md:text-xl lg:text-3xl">
             Contact Us
           </div>

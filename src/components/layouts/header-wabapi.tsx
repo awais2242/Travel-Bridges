@@ -45,7 +45,7 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
     >
       <div
         className={cn(
-          'fixed  z-50 flex justify-between h-22 w-full transform-gpu px-4 py-5 transition-transform duration-300 md:h-16 lg:h-22 lg:px-8',
+          'fixed  z-50 flex justify-between h-22 w-full transform-gpu px-4 py-5 transition-transform duration-300 md:h-22 lg:h-22 lg:px-8',
           color ? 'bg-indigo-600 shadow-md' : 'bg-indigo-600'
         )}
       >

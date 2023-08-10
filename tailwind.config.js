@@ -146,6 +146,7 @@ module.exports = {
         600: 'rgba(0, 0, 0, 0.1) 0px 3px 8px',
         700: 'rgba(0, 0, 0, 0.08) 0px 2px 16px',
         900: 'rgba(0, 0, 0, 0.05) 0px 21px 36px',
+        1000: 'rgb(156, 163, 175) 2px 3px 3px',
         downfall: 'rgba(0, 0, 0, 0.14) 0px 6px 12px',
         'downfall-xs': 'rgba(0, 0, 0, 0.14) 0px 1px 2px',
         'downfall-sm': 'rgba(0, 0, 0, 0.14) 0px 2px 4px',

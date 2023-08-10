@@ -23,7 +23,7 @@ const CardHome: React.FC<CardHomeprops> = ({
 }) => {
   return (
     <>
-      <Card className="rounded-tl-3xl rounded-br-3xl border border-teal-400 py-1 px-2 shadow-md  shadow-zinc-600 lg:h-48  lg:w-60 lg:py-3 lg:px-5">
+      <Card className="rounded-tl-3xl rounded-br-3xl border border-teal-400 py-3 px-3 shadow-1000  lg:h-48  lg:w-60 lg:px-5">
         <div>
           <div className="flex items-center justify-center">
             <Image
@@ -35,11 +35,11 @@ const CardHome: React.FC<CardHomeprops> = ({
               height={height}
             />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center justify-center">
             <div className="lg:text:md flex flex-row items-center justify-center text-xs font-bold text-teal-400 md:text-base">
               {title}
             </div>
-            <div className="lg:text:md block items-center justify-center text-xs md:text-base">
+            <div className="text-center text-xs md:text-base">
               {paragraph}
             </div>
           </div>

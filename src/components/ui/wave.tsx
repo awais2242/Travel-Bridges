@@ -5,7 +5,7 @@ import waveBottom from '@/assets/images/wave-bot.png';
 
 const WaveForm = () => {
   return (
-        <div className="waveWrapper waveAnimation ">
+        <div className="waveWrapper waveAnimation">
           <div className="waveWrapperInner  top">
             <div
               className="wave waveTop"

@@ -45,7 +45,7 @@ function RegisterForm() {
               label={t('text-name')}
               {...register('name')}
               variant="outline"
-              className="mb-5"
+              className="mb-5 "
               error={t(errors.name?.message!)}
             />
             <Input
@@ -53,7 +53,7 @@ function RegisterForm() {
               {...register('email')}
               type="email"
               variant="outline"
-              className="mb-5"
+              className="mb-5 "
               error={t(errors.email?.message!)}
             />
             <PasswordInput

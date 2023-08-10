@@ -35,7 +35,7 @@ const ContactFormWebapi = () => {
             <Input   
               {...register('name')}
               className="bg-indigo-600 text-white"
-              variant="outline"
+              variant="homeform"
               placeholder='Name'
               error={t(errors.name?.message!)}
             />
@@ -44,7 +44,7 @@ const ContactFormWebapi = () => {
               {...register('email')}
               type="email"
               placeholder='Email'
-              variant="outline"
+              variant="homeform"
               className="bg-indigo-600 text-white placeholder-white" 
               error={t(errors.email?.message!)}
             />
@@ -59,7 +59,7 @@ const ContactFormWebapi = () => {
           <TextArea
           
             {...register('description')}
-            variant="outline"
+            variant="homeform"
             placeholder='Message'
             className="bg-indigo-600  my-6"
             error={t(errors.description?.message!)}
