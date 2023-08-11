@@ -108,10 +108,10 @@ export const LandingPage = () => {
                   </p>
 
                   <div className="my-20   flex h-9 text-sm">
-                    <Button className="rounded bg-white px-2 text-indigo-950  shadow-md shadow-black hover:bg-teal-500 hover:text-white xs:px-8">
+                    <Button className="rounded font-normal bg-white px-2 text-indigo-950  shadow-md shadow-black hover:bg-teal-500 hover:text-white xs:px-8">
                       Buy now
                     </Button>
-                    <Button className="ml-4 rounded bg-teal-400 px-2 text-indigo-950 shadow-md shadow-black hover:bg-teal-500 hover:text-white xs:px-4 ">
+                    <Button className="ml-4 rounded font-normal bg-teal-400 px-2 text-indigo-950 shadow-md shadow-black hover:bg-teal-500 hover:text-white xs:px-4 ">
                       Book a demo
                     </Button>
                   </div>
@@ -147,10 +147,11 @@ export const LandingPage = () => {
             </div>
           </div>
 
-          <div className="mx-auto mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:mt-20 lg:gap-x-16 lg:gap-y-8">
+          <div className="mx-auto mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:mt-20 lg:gap-x-16 lg:gap-y-8">
             {cards.map((card, index) => (
               <CardHome
                 key={index}
+                cardClass=''
                 className={card.className}
                 source={card.source}
                 alternative={card.alternative}

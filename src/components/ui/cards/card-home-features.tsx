@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Card from './card';
 import broadcast from '@/assets/images/Vector.png';
 
-type CardHomeprops = {
+type CardHomeProps = {
   title?: string;
   paragraph?: string;
   width: number;
@@ -11,8 +11,9 @@ type CardHomeprops = {
   source: string;
   alternative: string;
   className: string;
+  cardClass: string;
 };
-const CardHome: React.FC<CardHomeprops> = ({
+const CardHome: React.FC<CardHomeProps> = ({
   title,
   paragraph,
   width,
@@ -20,6 +21,7 @@ const CardHome: React.FC<CardHomeprops> = ({
   source,
   alternative,
   className,
+  cardClass,
 }) => {
   return (
     <>
@@ -36,10 +38,10 @@ const CardHome: React.FC<CardHomeprops> = ({
             />
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="lg:text:md flex flex-row items-center justify-center text-xs font-bold text-teal-400 md:text-base">
+            <div className="lg:text:md flex flex-row items-center justify-center text-lg font-bold text-teal-400 md:text-base">
               {title}
             </div>
-            <div className="text-center text-xs md:text-base">
+            <div className="text-center text-base ">
               {paragraph}
             </div>
           </div>
