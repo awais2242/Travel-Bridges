@@ -30,9 +30,9 @@ const SectionBlock: React.FC<SectionProps> = ({
       )}
     >
       {title && (
-        <div className="flex items-center justify-between mb-7 ">
+        <div className="flex items-center justify-centre mb-7 ">
           {title && (
-            <h3 className="text-2xl lg:text-[27px] 3xl:text-3xl font-semibold">
+            <h3 className="text-2xl lg:text-[35px] 3xl:text-4xl">
               {t(title)}
             </h3>
           )}
