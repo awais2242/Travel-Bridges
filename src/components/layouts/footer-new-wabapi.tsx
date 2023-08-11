@@ -10,7 +10,7 @@ const FooterNew = () => {
   const footerDescription = siteSettings.footer.description;
   return (
     <>
-      <div className="relative  w-full flex-col border-t border-gray-300 bg-background-footer bg-cover bg-no-repeat">
+      <div className="relative  w-full flex-col border-gray-300 bg-background-footer bg-cover bg-no-repeat">
         <div className="container mx-auto ">
           {/* Top */}
           <div className="absolute  top-0 left-0  z-20 -translate-x-1/3 -translate-y-10 transform overflow-hidden">
