@@ -22,6 +22,11 @@ module.exports = {
       xs: '480px',
       ...defaultTheme.screens,
     },
+    borderRadius: {
+      
+      '4xl': '2rem',
+      ...defaultTheme.borderRadius,
+    },
     extend: {
       screens: {
         xs: '490px',
@@ -165,6 +170,7 @@ module.exports = {
         'offers': "url('../images/offers.png')",
         'background-footer': "url('../images/Frame 14987.png')",
         'background-dotted-rectangle':"url('../images/Group 14810.png')",
+        
       }
       
     },

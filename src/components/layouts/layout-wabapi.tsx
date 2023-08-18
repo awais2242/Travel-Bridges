@@ -1,5 +1,5 @@
 import useLayout from '@/lib/hooks/use-layout';
-import FooterNewWab from './footer-new-wabapi';
+import FooterNew from './footer-new-wabapi';
 import Header from './header';
 import HeaderWabapi from './header-wabapi';
 import HeaderMinimal from './header-minimal';
@@ -11,7 +11,7 @@ const SiteLayoutWithFooter: React.FC = ({ children }) => {
     <div className="flex flex-col min-h-screen transition-colors duration-150 bg-gray-100">
       <HeaderWabapi layout='compact' />
       {children}
-      <FooterNewWab />
+      <FooterNew />
     </div>
   );
 };

@@ -32,9 +32,9 @@ const FooterNew = () => {
                 <ul className="space-y-3">
                   {menu.links.map((link, index) => (
                     <li key={`${link.href}-${index}`}>
-                      <Link
+                      <Link     
                         href={link.href}
-                        className="text-sm text-white transition-colors hover:text-slate-300"
+                        className="text-sm text-white transition-colors hover:text-slate-300"         
                       >
                         {t(link.name)}
                       </Link>
@@ -54,10 +54,7 @@ const FooterNew = () => {
                   href={method.url}
                 >
                   {t(method.title)}
-                </Link>
-                {/* {idx < siteSettings.footer.description.length - 1 && (
-                  <div className="md:border-white-500  md:h-4 md:w-0 md:border"></div>
-                )} */}
+                </Link>  
               </>
             ))}
             <Link
