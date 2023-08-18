@@ -1,6 +1,6 @@
 export const about = {
   aboutHeading:
-    ' Wabusiness-Api Mission Is To Unlock The Imagination Of Builders',
+    '  Mission Is To Unlock The Imagination Of Builders',
   aboutDescription:
     'We’re The Customer Layer For The Internet, Powering The Most Engaging Interactions Companies Build For Their Customers. We Provide Simple Tools That Solve Hard Problems, Delivered As A Developer-First Cloud Platform With Global Reach And No Shenanigans Pricing.',
   vision: 'Our Mission Is To Help You Grow Your Business',

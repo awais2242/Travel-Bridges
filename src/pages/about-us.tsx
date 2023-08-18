@@ -27,10 +27,13 @@ export const AboutUs = () => {
               <div className="items-center justify-center">
                 <div className="pt-64 pl-10 pr-4 sm:pl-20  sm:pb-10  lg:pl-52 lg:pt-36 lg:pr-2 xl:pr-10">
                   <p className="test-xs">About Wabusiness-Api</p>
-                  <h1 className="flex text-xl font-medium antialiased md:text-2xl lg:text-3xl">
+                  <div className='flex flex-col'>
+                  <h1 className='font-bold text-xl md:text-2xl lg:text-3xl'>Wabusiness-Api</h1>
+                  <h1 className="flex text-xl font-semibold antialiased md:text-2xl lg:text-3xl">
                     {about.aboutHeading}
                   </h1>
-                  <p className="mt-6 text-sm text-slate-600 antialiased ">
+                  </div>
+                  <p className="mt-6 text-md text-slate-900 antialiased ">
                     {about.aboutDescription}
                   </p>
                 </div>
@@ -64,14 +67,14 @@ export const AboutUs = () => {
             <div className="flex items-center justify-center">
               <div className="pl-4 pb-8 pr-10   sm:pb-10  lg:pr-24 xl:pr-72 lg:pt-36 lg:pl-2 ">
                 <div className='pl-4 flex flex-col sm:items-center sm:justify-center lg:items-start lg:pl-0 '>
-                  <p className="test-xs font-semibold py-2">Our Vision</p>
-                  <h1 className="flex pr-8 text-xl font-bold   antialiased md:text-2xl lg:text-3xl">
+                  <p className="text-xl font-semibold py-2">Our Vision</p>
+                  <h1 className="flex lg:pr-6 text-2xl font-bold   antialiased md:text-2xl lg:text-3xl">
                     {about.vision}
                   </h1>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 px-4 lg:px-0">
                   <div className='sm:px-2 lg:px-0'>
-                    <p className="test-xs pt-14 pb-2 font-bold text-teal-400 ">
+                    <p className="text-xl pt-14 pb-2 font-bold text-teal-400 ">
                       Who We Are
                     </p>
                     <p className="text-md text-slate-600 antialiased ">
@@ -79,7 +82,7 @@ export const AboutUs = () => {
                     </p>
                   </div>
                   <div className='sm:px-2 lg:px-0'>
-                    <p className="test-xs pt-14 pb-2 font-bold text-teal-400">
+                    <p className="text-xl pt-14 pb-2 font-bold text-teal-400">
                       Our Mission
                     </p>
                     <p className=" text-md text-slate-600 antialiased ">
@@ -102,8 +105,8 @@ export const AboutUs = () => {
                   className="items-center justify-center rounded-tl-4xl text-center shadow-500 shadow-black rounded-br-4xl bg-gradient-to-r  from-indigo-400   to-teal-100     lg:h-48  lg:w-96 "
                   key={`${card.title}-${index}`}
                 >
-                  <div className=" font-bold">{card.title}</div>
-                  <div className=' '>{card.paragraph}</div>
+                  <div className=" font-bold text-xl">{card.title}</div>
+                  <div className='text-md '>{card.paragraph}</div>
                 </Card>
               ))}
             </div>
