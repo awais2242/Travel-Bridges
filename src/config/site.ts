@@ -94,7 +94,7 @@ export const siteSettings = {
         links: [
           {
             name: 'text-about-us',
-            href: '/',
+            href: '/about-us',
           },
           {
             name: 'text-why-wabusinessapi',
