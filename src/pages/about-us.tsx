@@ -40,7 +40,7 @@ export const AboutUs = () => {
               </div>
 
               <div className="flex flex-col items-center justify-center sm:pt-40 md:pt-48 lg:pr-36 lg:pt-20">
-                <div className="relative mb-28 w-80 sm:h-2/6  md:h-3/6 md:max-h-[610px] md:w-96 lg:h-5/6 lg:w-0  xl:h-96 xl:w-full">
+                <div className="relative mb-4 w-80 sm:mb-28 sm:h-2/6  md:h-3/6 md:max-h-[610px] md:w-96 lg:h-3/6   xl:h-96 xl:w-full 2xl:h-2/6">
                   <Image
                     src={aboutImage}
                     alt="Banner"
@@ -53,9 +53,9 @@ export const AboutUs = () => {
           </div>
           {/* {//////////////////////////////////////////////////////} */}
 
-          <div className="relative grid grid-cols-1 gap-5  lg:grid-cols-2">
-            <div className="pl-20 flex flex-col items-center justify-center pt-20  sm:pt-10 lg:pt-20 lg:pl-0 xl:pl-20">
-              <div className="relative  w-80 sm:h-5/6 sm:w-96   md:w-96 lg:h-60 lg:w-11/12 xl:h-96 xl:w-full">
+          <div className=" grid grid-cols-1 lg:grid-cols-2">
+            <div className="pl-20 flex flex-col items-center justify-center pt-20  sm:pt-10 lg:pt-20  ">
+              <div className="  w-80 sm:h-5/6 sm:w-96   md:w-96 lg:h-2/6 lg:w-full xl:h-96 xl:w-full lg:ml-20 xl:ml-36">
                 <Image
                   src={visionImage}
                   alt="Banner"
@@ -103,7 +103,7 @@ export const AboutUs = () => {
               {about.policy?.map((card, index) => (
                 <Card
                   className="items-center justify-center rounded-tl-4xl text-center shadow-500 shadow-black rounded-br-4xl bg-gradient-to-r  from-indigo-400   to-teal-100     lg:h-48  lg:w-96 "
-                  key={`${card.title}-${index}`}
+                  key={`${index}`}
                 >
                   <div className=" font-bold text-xl">{card.title}</div>
                   <div className='text-md '>{card.paragraph}</div>
