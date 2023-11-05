@@ -68,9 +68,9 @@ export const AboutUs = () => {
               <div className="pl-4 pb-8 pr-10   sm:pb-10  lg:pr-24 xl:pr-72 lg:pt-36 lg:pl-2 ">
                 <div className='pl-4 flex flex-col sm:items-center sm:justify-center lg:items-start lg:pl-0 '>
                   <p className="text-xl font-semibold py-2">Our Vision</p>
-                  <h1 className="flex lg:pr-6 text-2xl font-bold   antialiased md:text-2xl lg:text-3xl">
+                  {/* <h1 className="flex lg:pr-6 text-2xl font-bold   antialiased md:text-2xl lg:text-3xl">
                     {about.vision}
-                  </h1>
+                  </h1> */}
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 px-4 lg:px-0">
                   <div className='sm:px-2 lg:px-0'>
