@@ -109,11 +109,7 @@ export const HomePage = () => {
                   </div>
                 </div>
 
-                {/* <a href={Routes.coupons} className='flex items-center justify-center'>
-                  <div className=' bg-gray-200 w-28 h-22 md:w-56 md:h-32 lg:w-72 lg:h-40 bg-offers bg-cover p-5'>
-                    <h1 className='text-lg text-white'>Offers</h1>
-                  </div>
-                </a> */}
+               
               </div>
 
               {/* <div className=' grid grid-cols-2 gap-5 2xl:grid-cols-1 '>

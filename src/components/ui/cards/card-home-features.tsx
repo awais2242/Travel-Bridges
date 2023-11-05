@@ -27,7 +27,7 @@ const CardHome: React.FC<CardHomeProps> = ({
     <>
       <Card className="rounded-tl-3xl rounded-br-3xl border border-teal-400 p-3 md:p-3 shadow-1000  lg:h-48  lg:w-60 lg:px-5">
         <div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center ${className}">
             <Image
               className={className}
               src={source}

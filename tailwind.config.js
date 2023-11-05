@@ -168,7 +168,7 @@ module.exports = {
         'hafeez-center-lahore': "url('../images/hafeez-center-lahore.png')",
         'books-world': "url('../images/books-world.png')",
         'offers': "url('../images/offers.png')",
-        'background-footer': "url('../images/Frame 14987.png')",
+        'background-footer': "url('/src/images/')",
         'background-dotted-rectangle':"url('../images/Group 14810.png')",
         
       }

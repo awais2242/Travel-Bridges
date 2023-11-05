@@ -1,9 +1,6 @@
-import useLayout from '@/lib/hooks/use-layout';
+
 import FooterNew from './footer-new-wabapi';
-import Header from './header';
 import HeaderWabapi from './header-wabapi';
-import HeaderMinimal from './header-minimal';
-import MobileNavigation from './mobile-navigation';
 
 const SiteLayoutWithFooter: React.FC = ({ children }) => {
   
