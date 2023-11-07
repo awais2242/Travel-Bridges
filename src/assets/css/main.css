@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rosario&display=swap');
 
 
+
 @font-face {
   font-family:"Rosario" ;
   src: url("../fonts/Rosario-Regular.ttf");
@@ -274,7 +275,8 @@
 
     /* darker-purple-text */
     --color-indigo-950:22, 21, 62;
-
+    
+    --color-olive-green:85,107,47 ;
   }
 
   html {

@@ -10,7 +10,7 @@ const FooterNew = () => {
   const footerDescription = siteSettings.footer.description;
   return (
     <>
-      <div className="relative  w-full flex-col border-gray-300 bg-background-footer bg-cover bg-no-repeat">
+      <div className="relative  w-full flex-col border-gray-300 bg-olive-green bg-cover bg-no-repeat">
         <div className="container mx-auto ">
           {/* Top */}
           <div className="absolute  top-0 left-0  z-20 -translate-x-1/3 -translate-y-10 transform overflow-hidden">
@@ -25,7 +25,7 @@ const FooterNew = () => {
 
             {siteSettings.footer.menus.map((menu, idx) => (
               <div className="flex flex-col" key={`${menu.title}-${idx}`}>
-                <h3 className="mt-3 mb-4  text-teal-400 lg:mb-7">
+                <h3 className="mt-3 mb-4 text-xl text-semibold  text-white lg:mb-7">
                   {t(menu.title)}
                 </h3>
 
@@ -49,7 +49,7 @@ const FooterNew = () => {
             {footerDescription?.slice(0,-1)?.map((method, idx) => (
               <>
                 <Link
-                  className="flex items-center justify-center my-2 text-sm text-teal-400 md:mb-0 md:pr-4 md:border-r-2"
+                  className="flex items-center justify-center my-2 text-sm text-white md:mb-0 md:pr-4 md:border-r-2"
                   key={`${method.url}-${idx}`}
                   href={method.url}
                 >
@@ -58,7 +58,7 @@ const FooterNew = () => {
               </>
             ))}
             <Link
-              className="flex items-center justify-center my-2 text-sm text-teal-400 md:mb-0"
+              className="flex items-center justify-center my-2 text-sm text-white md:mb-0"
               key={`${footerDescription[footerDescription.length-1]?.url}-5`}
               href={footerDescription[footerDescription.length-1]?.url}
             >
@@ -67,7 +67,7 @@ const FooterNew = () => {
           </div>
         </div>
         {/* Bottom */}
-        <div className="flex w-full flex-col items-center bg-slate-950 py-3 lg:mt-0 lg:flex-row lg:justify-between lg:border-t-0">
+        <div className="flex w-full flex-col items-center bg-lime-900 py-3 lg:mt-0 lg:flex-row lg:justify-between lg:border-t-0">
           <span className="mx-auto flex text-xs text-white ">
             {t('text-copyright')} &copy; {new Date().getFullYear()} &nbsp;
             <Link

@@ -11,11 +11,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
     "@headlessui/react": "1.6.5",
     "@hookform/resolvers": "2.8.8",
     "@reach/portal": "0.16.2",
     "@stripe/react-stripe-js": "1.7.0",
     "@stripe/stripe-js": "1.25.0",
+    "@types/react-datepicker": "^4.19.1",
     "axios": "0.26.1",
     "body-scroll-lock": "4.0.0-beta.0",
     "camelcase-keys": "7.0.2",
@@ -42,6 +44,7 @@
     "react": "17.0.2",
     "react-content-loader": "6.2.0",
     "react-copy-to-clipboard": "5.0.4",
+    "react-datepicker": "^4.21.0",
     "react-device-detect": "2.1.2",
     "react-dom": "17.0.2",
     "react-dropzone": "12.0.4",

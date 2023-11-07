@@ -90,6 +90,7 @@ module.exports = {
         'slate-950': withOpacity('--color-slate-950'),
         'teal-400': withOpacity('--color-teal-400'),
         'indigo-950':withOpacity(' --color-indigo-950'),
+        'olive-green':withOpacity(' --color-olive-green'),
         social: {
           facebook: '#3b5998',
           'facebook-hover': '#35508a',
@@ -170,7 +171,12 @@ module.exports = {
         'offers': "url('../images/offers.png')",
         'background-footer': "url('/src/images/')",
         'background-dotted-rectangle':"url('../images/Group 14810.png')",
-        
+        'swat': "url('../images/swat/Mahodand-lake-kalam valley.jpg')",
+        'gilgit': "url('../images/gilgit/rakaposhi.jpg')",
+        'multan': "url('../images/multan/multan-ghanta-ghar.jpg')",
+        'naran': "url('../images/naran/Saiful-muluk-lake.jpg')",
+        'lahore': "url('../images/lahore/lahore fort/1.jpg')",
+        'islamabad': "url('../images/islambad/damne koh/1.jpeg')",
       }
       
     },

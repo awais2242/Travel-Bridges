@@ -78,12 +78,12 @@ const HeaderWabapi = ({ layout }: { layout?: string }) => {
           <div className="flex items-center space-x-7 rtl:space-x-reverse">
             <li>{isAuthorize ? <AuthorizedMenu minimal={true} /> : <JoinButton />}</li>
             <a
-              href={`${process.env.NEXT_PUBLIC_ADMIN_URL}/register`}
+              href={'/become_a_guide'}
               target="_blank"
               rel="noreferrer"
               className="inline-flex h-9 w-28 items-center justify-center rounded border border-transparent bg-teal-400  py-0 text-sm leading-none text-indigo-950 hover:text-white outline-none transition duration-300 ease-in-out hover:bg-teal-500 focus:shadow focus:outline-none focus:ring-1 focus:ring-accent-700"
             >
-              {t('text-contact-us')}
+              Become a Guide
             </a>
           </div>
           {isMultilangEnable ? (

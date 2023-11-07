@@ -90,77 +90,57 @@ export const siteSettings = {
     phone: '+1 256-698-0694',
     menus: [
       {
-        title: 'text-company',
+        title: "Partners",
         links: [
           {
-            name: 'text-about-us',
-            href: '/about-us',
+            name: "Join Travel Bridges",
+            href: "/",
           },
           {
-            name: 'text-why-wabusinessapi',
-            href: '/',
-          },
-          {
-            name: 'text-public-policy',
-            href: '/',
+            name: "Provider Sign In",
+            href: "/",
           },
         ],
       },
       {
-        title: 'text-solution',
+        title: "Company",
         links: [
           {
-            name: 'text-customer-data-platform',
-            href: '/',
+            name: "About Us",
+            href: "/",
           },
           {
-            name: 'text-sms-marketing',
-            href: '/',
+            name: "Contact Us",
+            href: "/",
           },
           {
-            name: 'text-contact-center',
-            href: '/',
+            name: "Help",
+            href: "/",
           },
+          {
+            name: "Terms & Legal",
+            href: "/",
+          },
+         
         ],
       },
       {
-        title: 'text-resources',
+        title: "Resources",
         links: [
           {
-            name: 'text-blog',
-            href: Routes.privacy,
+            name: "Blog",
+            href: "/",
           },
           {
-            name: 'text-apidocs',
-            href: Routes.terms,
+            name: "Press",
+            href: "/",
           },
           {
-            name: 'text-help-center',
-            href: '/',
+            name: "Security & Privacy",
+            href: "/",
           },
+         
         ],
-      },
-    ],
-    payment_methods: [
-      {
-        img: '/payment/master.png',
-        url: '/',
-      },
-      {
-        img: '/payment/skrill.png',
-        url: '/',
-      },
-      {
-        img: '/payment/paypal.png',
-        url: '/',
-      },
-      {
-        img: '/payment/visa.png',
-        url: '/',
-      },
-      {
-        img: '/payment/discover.png',
-        url: '/',
       },
     ],
     description: [
